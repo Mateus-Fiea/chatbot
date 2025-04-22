@@ -9,8 +9,9 @@
   },
   "Moskit": {
     "como cadastrar empresa no moskit": "🔹 Cadastro no Moskit:\n- Crie um negócio\n- Vincule a empresa\n- Vincule o contato\n- Ative via Observatório",
+    "como criar um negócio no moskit": "🔹 Criar negócio:\n- Vá em 'Novo Negócio'\n- Preencha nome, etapa, empresa, contato e produto",
+    "como cadastrar no moskit": "🔹 Cadastro no Moskit:\n- Siga as etapas descritas para cadastrar a empresa e o contato.",
     "funil do moskit": "🔹 Funil do Moskit:\n1. Base Geral\n2. Cliente Potencial\n3. Lead Qualificado\n4. Oportunidade\n5. Reunião\n6. Elaborar Proposta",
-    "como criar negócio no moskit": "🔹 Criar negócio:\n- Vá em 'Novo Negócio'\n- Preencha nome, etapa, empresa, contato e produto",
     "id da empresa moskit": "🔹 ID da empresa:\n- Para gerar link no 360, o contato precisa estar vinculado corretamente à empresa",
     "empresa não aparece no moskit": "🔹 Empresa não aparece?\n- Verifique CNPJ válido e ativação pelo Observatório"
   },

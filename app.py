@@ -6,7 +6,7 @@ st.set_page_config(page_title="Chat de Regras – Auditoria, Moskit e 360", layo
 st.title("🤖 Chat Inteligente – Regras, Moskit e Solução 360")
 st.write("Digite sua dúvida sobre modelos de gestão, Moskit ou 360:")
 
-@st.cache_data
+@st.cache_data(ttl=0)
 def carregar_base():
     with open("base_conhecimento.json", "r", encoding="utf-8") as f:
         return json.load(f)
