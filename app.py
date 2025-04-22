@@ -20,43 +20,44 @@ def encontrar_resposta(pergunta_usuario):
     mapa_respostas = {}
     palavras_chave = []
 
+    # Adicionando as perguntas e respostas ao mapa
     for categoria, perguntas in base_conhecimento.items():
         for chave, resposta in perguntas.items():
             todas_chaves.append(chave)
             mapa_respostas[chave] = resposta
-
-            # Coleta palavras-chave da chave para ajudar na sugestão
+            # Adiciona palavras-chave ao nosso filtro
             palavras_chave.extend(chave.lower().split())
 
-    # Verifica se há correspondência exata com a pergunta
+    # Verificação de correspondência exata ou alta similaridade
     melhor, score = process.extractOne(pergunta_usuario.lower(), todas_chaves, scorer=fuzz.token_sort_ratio)
 
     if score >= 70:
         return mapa_respostas[melhor]
     else:
-        # Sugestões de perguntas relacionadas com base nas palavras-chave
+        # Sugestões baseadas em similaridade
         sugestoes = [m for m, s in process.extract(pergunta_usuario.lower(), todas_chaves, limit=3) if s >= 50]
         if sugestoes:
             sugestao_txt = "\n".join([f"- {s}" for s in sugestoes])
             return f"🤔 Não encontrei resposta exata, mas talvez você quis dizer:\n\n{suggestao_txt}"
 
-        # Se não houver correspondência exata ou sugestões, tenta sugerir palavras-chave
+        # Se não encontrar sugestão, tenta verificar palavras-chave relacionadas
         palavras_usuario = pergunta_usuario.lower().split()
         palavras_encontradas = [p for p in palavras_usuario if p in palavras_chave]
 
         if palavras_encontradas:
-            # Se encontrou palavras-chave relacionadas, sugere as perguntas
+            # Sugerir perguntas baseadas nas palavras-chave encontradas
             sugestao_txt = "\n".join([f"- {s}" for s in palavras_encontradas])
             return f"🤔 Não encontrei resposta exata, mas com base nas palavras-chave, talvez você quis dizer:\n\n{suggestao_txt}"
-        
-        return None
+
+        # Caso não consiga encontrar nenhuma correspondência ou sugestão
+        return "🤔 Não encontrei uma resposta exata, mas talvez uma das opções anteriores ajude!"
 
 if pergunta:
     resposta = encontrar_resposta(pergunta)
     if resposta:
         st.success(resposta)
     else:
-        st.error("❌ Ainda não sei responder essa pergunta. Fale com o Mateus.")
+        st.warning("🤔 Não encontrei uma resposta exata, mas estou sugerindo algo. Tente novamente.")
 
 if "historico" not in st.session_state:
     st.session_state.historico = []
