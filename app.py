@@ -24,13 +24,13 @@ def encontrar_resposta(pergunta_usuario):
             todas_chaves.append(chave)
             mapa_respostas[chave] = resposta
 
-    # Ajuste para melhorar a correspondência e sugerir opções melhores
+    # Ajuste na correspondência, permitindo variações mais amplas
     melhor, score = process.extractOne(pergunta_usuario.lower(), todas_chaves, scorer=fuzz.token_sort_ratio)
 
-    if score >= 70:  # Ajuste o valor de 70 se necessário para aumentar a flexibilidade
+    if score >= 70:  # Agora, ajustamos para que qualquer correspondência acima de 70 seja considerada
         return mapa_respostas[melhor]
     else:
-        # Sugestões de perguntas similares se não encontrar uma correspondência exata
+        # Se não encontrar correspondência exata, ele sugere algumas variações.
         sugestoes = [m for m, s in process.extract(pergunta_usuario.lower(), todas_chaves, limit=3) if s >= 50]
         if sugestoes:
             sugestao_txt = "\n".join([f"- {s}" for s in sugestoes])
@@ -54,3 +54,4 @@ if st.session_state.historico:
     with st.expander("📜 Ver histórico"):
         for h in reversed(st.session_state.historico[-5:]):
             st.markdown(f"• {h}")
+
