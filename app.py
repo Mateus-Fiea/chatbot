@@ -50,7 +50,7 @@ def encontrar_resposta(pergunta_usuario):
             return f"🤔 Não encontrei resposta exata, mas com base nas palavras-chave, talvez você quis dizer:\n\n{suggestao_txt}"
 
         # Caso não consiga encontrar nenhuma correspondência ou sugestão
-        return "🤔 Não encontrei uma resposta exata, mas talvez uma das opções anteriores ajude!"
+        return "🤔 Não encontrei uma resposta exata, mas aqui estão algumas sugestões que podem ser úteis."
 
 if pergunta:
     resposta = encontrar_resposta(pergunta)
