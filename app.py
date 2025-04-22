@@ -24,14 +24,16 @@ def encontrar_resposta(pergunta_usuario):
             todas_chaves.append(chave)
             mapa_respostas[chave] = resposta
 
-    melhor, score = process.extractOne(pergunta_usuario.lower(), todas_chaves, scorer=fuzz.partial_ratio)
+    # Ajuste na lógica de correspondência
+    melhor, score = process.extractOne(pergunta_usuario.lower(), todas_chaves, scorer=fuzz.token_sort_ratio)
 
     if score >= 70:
         return mapa_respostas[melhor]
     else:
-        sugestões = [m for m, s in process.extract(pergunta_usuario.lower(), todas_chaves, limit=3) if s >= 50]
-        if sugestões:
-            sugestao_txt = "\n".join([f"- {s}" for s in sugestões])
+        # Sugestões para perguntas com menos correspondência
+        sugestoes = [m for m, s in process.extract(pergunta_usuario.lower(), todas_chaves, limit=3) if s >= 50]
+        if sugestoes:
+            sugestao_txt = "\n".join([f"- {s}" for s in sugestoes])
             return f"🤔 Não encontrei resposta exata, mas talvez você quis dizer:\n\n{suggestao_txt}"
         return None
 
