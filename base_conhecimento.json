@@ -1,0 +1,31 @@
+{
+  "Modelos de Gestão": {
+    "modelo mensal": "🔹 **Modelo Mensal**:\n- Permitido para: Combo SST, Aprendizagem, Curso Técnico (12 a 24 parcelas)\n- Ginástica Laboral e Mão de Obra Especializada: somente 12 parcelas\n- Forma: Boleto\n- ❌ Não permitido para: Locação de Espaços",
+    "modelo após execução": "🔹 **Após Execução**:\n- Não permite parcelamento\n- Apenas boleto bancário\n- ❌ Não pode ser usado com Locação de Espaços",
+    "modelo após assinatura": "🔹 **Após Assinatura**:\n- Até 10 parcelas (até 12 se for Mão de Obra Especializada com medição mensal)\n- ❌ Não aceita Depósito em Conta",
+    "modelo após pagamento": "🔹 **Após Pagamento**:\n- Máximo 2 parcelas\n- Usado para Locação e clientes inadimplentes\n- ❌ Não usar Depósito em Conta",
+    "diferença entre após assinatura e mensal": "🔹 Diferença:\n- Após Assinatura = pagamento tradicional, exige NF\n- Mensal = recorrente, pode chegar a 24 parcelas",
+    "aprendizagem gratuita": "🔹 **Aprendizagem Gratuita**:\n- Após Assinatura + Depósito em Conta\n- ❌ Não pode usar boleto, cartão ou outros modelos"
+  },
+  "Moskit": {
+    "como cadastrar empresa no moskit": "🔹 Cadastro no Moskit:\n- Crie um negócio\n- Vincule a empresa\n- Vincule o contato\n- Ative via Observatório",
+    "funil do moskit": "🔹 Funil do Moskit:\n1. Base Geral\n2. Cliente Potencial\n3. Lead Qualificado\n4. Oportunidade\n5. Reunião\n6. Elaborar Proposta",
+    "como criar negócio no moskit": "🔹 Criar negócio:\n- Vá em 'Novo Negócio'\n- Preencha nome, etapa, empresa, contato e produto",
+    "id da empresa moskit": "🔹 ID da empresa:\n- Para gerar link no 360, o contato precisa estar vinculado corretamente à empresa",
+    "empresa não aparece no moskit": "🔹 Empresa não aparece?\n- Verifique CNPJ válido e ativação pelo Observatório"
+  },
+  "Sistema 360": {
+    "como preencher proposta no 360": "🔹 Etapas obrigatórias:\n1. Informações (forma de pagamento, tipo de proposta, template)\n2. Contato\n3. Produto\n4. Parcelas",
+    "diagnóstico no 360": "🔹 Diagnóstico:\n- Usado quando precisa ajustar produto, valor, carga horária\n- Movido ao setor de Negócios",
+    "combo sst no 360": "🔹 Combo SST:\n- Inclui: PGR, PCMSO, E-social, S+, Laudos\n- Modelo: Mensal\n- Prazo: 24 meses\n- ❗ Sem E-social = não é Combo",
+    "unidade executora 360": "🔹 Unidade Executora:\n- Preencher quando quem executa é diferente da unidade comercial\n- Evita erros no sistema",
+    "aba produto não aparece": "🔹 Aba Produto:\n- Falta preenchimento: forma de pagamento, tipo de proposta, template ou tabela de preço"
+  },
+  "Regras Específicas": {
+    "modelo para sebrae": "🔹 Sebrae:\n- Modelo obrigatório: Após Assinatura\n- ❌ Qualquer outro modelo é incorreto",
+    "faturamento sob demanda senai/al": "🔹 SENAI/AL + Faturamento Sob Demanda:\n- ❌ Não é permitido\n- ✅ Apenas Metrologia com Após Execução",
+    "fontes pagadoras abdi sebrae al b+p senai dr/df": "🔹 Fontes: DR/DF, ABDI, SEBRAE-AL, B+P\n- Devem usar Após Execução + Depósito em Conta\n- ❌ Sem boleto ou cartão",
+    "sem produto": "🔴 Erro: Proposta sem produto.\n- Corrigir adicionando produto válido",
+    "locação de espaços": "🔹 Locação:\n- Modelo: Após Pagamento\n- ❌ Não usar Mensal, Execução ou Assinatura"
+  }
+}
