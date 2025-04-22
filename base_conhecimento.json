@@ -29,7 +29,7 @@
     "modelo de contrato sebrae": "🔹 Sebrae:\n- Modelo obrigatório: Após Assinatura\n- ❌ Qualquer outro modelo é incorreto",
     "faturamento sob demanda senai/al": "🔹 SENAI/AL + Faturamento Sob Demanda:\n- ❌ Não é permitido\n- ✅ Apenas Metrologia com Após Execução",
     "fontes pagadoras abdi sebrae al b+p senai dr/df": "🔹 Fontes: DR/DF, ABDI, SEBRAE-AL, B+P\n- Devem usar Após Execução + Depósito em Conta\n- ❌ Sem boleto ou cartão",
-    "sem produto": "🔴 Erro: Proposta sem produto.\n- Corrigir adicionando produto válido",
+    "sem produto": "🔴 Erro:Proposta sem produto.\n- Corrigir adicionando produto válido",
     "locação de espaços": "🔹 Locação:\n- Modelo: Após Pagamento\n- ❌ Não usar Mensal, Execução ou Assinatura"
   }
 }
